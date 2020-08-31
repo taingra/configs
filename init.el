@@ -105,10 +105,17 @@
 
 ;;; Packages
 
+;; delight is similar to deminish mode but provided in GNU ELPA.
+;; Both have built in use package support
+(use-package delight
+  :ensure t)
+
 ;; Programming
 
+; Drop down auto-completion support
 (use-package company
   :ensure t
+  :delight
   ;; :hook (emacs-lisp-mode . company-mode)
   ;; Perhaps I should enable on a per mode basis?
   :config

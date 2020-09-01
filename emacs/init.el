@@ -12,6 +12,18 @@
 
 ;;; Code:
 
+;; Increase mememory
+(setq gc-cons-threshold 100000000)
+
+(setq read-process-output-max (* 1024 1024))
+
+;; Prefer newest elisp files
+(setq load-prefer-newer t)
+
+;; Move auto-generated code out of init.el
+(setq custom-file "~/.config/emacs/customizations.el")
+(load custom-file 't)
+
 ;;; Visuals
 
 (setq-default frame-title-format '("%b  -  GNU Emacs"))

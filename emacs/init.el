@@ -26,9 +26,6 @@
 ;; Increase font size
 (set-face-attribute 'default nil :height 140)
 
-;; Theme
-(load-theme 'modus-operandi)
-
 
 ;;; Editing
 
@@ -179,4 +176,27 @@
 
 ;; Magit improved git management
 (use-package magit
+  :ensure t
   :bind ("C-x g" . magit))
+
+
+;; Theme
+(use-package modus-operandi-theme
+  :ensure t
+  :config
+  (load-theme 'modus-operandi))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("3dbb18bf06f41012d4525e6c64c392d6cfef06a2f8fe1bf7b565c4e020255466" default))
+ '(package-selected-packages
+   '(magit modus-operandi-theme use-package go-mode delight company)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

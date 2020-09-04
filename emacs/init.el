@@ -139,6 +139,14 @@
   (company-idle-delay 0)
   (company-minimum-prefex-length 1))
 
+
+;; Language server protocol client, provides IDE-like features in Emacs
+(use-package eglot
+  :ensure t
+  ;; Only enable eglot in languages you want to install a LSP server for
+  :hook (((go-mode python-mode) . eglot-ensure)))
+
+
 ;; Writing
 
 ;; Org Mode

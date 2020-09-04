@@ -63,11 +63,12 @@
 (global-set-key (kbd "C-x t") 'shell)
 
 
-;;; Package
+;; MELPA
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
+
 ;; One day use-package will be included by default...
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -84,6 +85,7 @@
 	      ("C-c C-b" . eval-buffer))
   :hook ((emacs-lisp-mode . flymake-mode)))
 
+;; C
 (use-package c-mode
   :bind (:map c-mode-map
 	      ("C-c c"   . compile)
@@ -117,17 +119,16 @@
 	 (go-mode . electric-pair-mode)
 	 (before-save . gofmt-before-save)))
 
-
 ;;; Packages
 
 ;; delight is similar to deminish mode but provided in GNU ELPA.
-;; Both have built in use package support
+;; Both have built in `use-package' support
 (use-package delight
   :ensure t)
 
-;; Programming
+;;; Programming Packages
 
-; Drop down auto-completion support
+;; Drop down auto-completion support
 (use-package company
   :ensure t
   :delight
@@ -211,3 +212,5 @@
   :ensure t
   :config
   (load-theme 'modus-operandi))
+
+;;; init.el ends here

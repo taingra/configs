@@ -93,6 +93,12 @@
   :hook ((c-mode . electric-pair-mode)
 	 (c-mode . flymake-mode)))
 
+
+;; Python
+(use-package python-mode
+  :hook ((python-mode . electric-pair-mode)))
+
+
 ;; Golang
 (use-package go-mode
   :ensure t

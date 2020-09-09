@@ -20,6 +20,8 @@
 ;; Prefer newest elisp files
 (setq load-prefer-newer t)
 
+(prefer-coding-system 'utf-8-unix)
+
 ;; Move auto-generated code out of init.el
 (setq custom-file "~/.config/emacs/customizations.el")
 (load custom-file 't)

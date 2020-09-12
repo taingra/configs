@@ -64,6 +64,12 @@
 ;; Open terminal
 (global-set-key (kbd "C-x t") 'shell)
 
+;; Don't check for version control over tramp
+(setq vc-ignore-dir-regexp
+      (format "\\(%s\\)\\|\\(%s\\)"
+              vc-ignore-dir-regexp
+              tramp-file-name-regexp))
+
 
 ;; MELPA
 

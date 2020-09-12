@@ -136,6 +136,10 @@
 
 ;;; Programming Packages
 
+(use-package paredit
+  :ensure t
+  :hook (emacs-lisp-mode lisp-mode scheme-mode))
+
 ;; Drop down auto-completion support
 (use-package company
   :ensure t

@@ -1,4 +1,4 @@
-;;; .emacs --- my minimal Emacs config  -*- lexical-binding: t; -*-
+;;; init.el --- my minimal Emacs config  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020 Thomas Ingram
 

@@ -85,6 +85,8 @@ Saves to a temp file and puts the filename in the kill ring."
 ;; Compilation in shell
 (add-hook 'shell-mode-hook 'compilation-shell-minor-mode)
 
+(global-set-key (kbd "C-x m") 'man)
+
 ;; Don't check for version control over tramp
 (setq vc-ignore-dir-regexp
       (format "\\(%s\\)\\|\\(%s\\)"

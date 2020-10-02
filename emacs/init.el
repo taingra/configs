@@ -162,6 +162,17 @@ Saves to a temp file and puts the filename in the kill ring."
 (use-package delight
   :ensure t)
 
+(use-package helm
+  :ensure t
+  :bind (("M-x" . helm-M-x)
+	 ("C-x C-f" . helm-find-files)
+	 ("C-x r b" . helm-filtered-bookmarks)
+	 :map helm-map
+	 ("<tab>" . helm-execute-persistent-action))
+  :config
+  (helm-mode 1))
+
+
 ;;; Programming Packages
 
 (use-package paredit

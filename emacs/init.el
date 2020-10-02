@@ -242,8 +242,9 @@ Saves to a temp file and puts the filename in the kill ring."
       "* %u %^{Entry title}\n %?\n"))))
 
 
-(use-package auctex
-  :defer t
+(use-package tex
+  :ensure auctex
+  :mode ("\\.tex\\'" . latex-mode)
   :config
   (defun my/latex-compile ()
     "My compile latex function"

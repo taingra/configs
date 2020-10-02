@@ -71,6 +71,9 @@ Saves to a temp file and puts the filename in the kill ring."
 
 ;;; Built-in Tools
 
+(require 'recentf)
+(recentf-mode 1)
+
 ;; Custom ls command flags
 (setq dired-listing-switches "-la --group-directories-first")
 

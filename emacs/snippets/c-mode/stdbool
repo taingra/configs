@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: stdbool
+# key: bool
+# --
+#include <stdbool.h>

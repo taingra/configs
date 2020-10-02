@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: debug
+# key: debug
+# --
+#ifdef DEBUG
+$>fprintf(stderr, "${1:%s}\\n"${1:$(if (string-match "%" yas-text) ", " "\);")
+}$2${1:$(if (string-match "%" yas-text) "\);" "")}
+#endif

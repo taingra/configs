@@ -1,0 +1,4 @@
+#+title: Snippets for Yasnippet
+
+Most of these are taken from the [[https://github.com/AndreaCrotti/yasnippet-snippets][offical Yasnippet snippet collection]], a few are
+original and written by me. They are licensed under the GPLv3.

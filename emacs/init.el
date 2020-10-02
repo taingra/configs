@@ -178,6 +178,14 @@ Saves to a temp file and puts the filename in the kill ring."
   (company-minimum-prefex-length 1))
 
 
+(use-package yasnippet
+  :ensure t
+  :hook ((prog-mode) . yas-minor-mode)
+  :config
+  (yas-reload-all)
+  (setq yas-snippet-dirs (concat user-emacs-directory "snippets/")))
+
+
 ;; Language server protocol client, provides IDE-like features in Emacs
 (use-package eglot
   :ensure t

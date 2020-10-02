@@ -124,7 +124,9 @@ Saves to a temp file and puts the filename in the kill ring."
 	      ("C-c g"   . gdb)
               ("C-c C-r" . gdb-run))
   :hook ((c-mode . electric-pair-mode)
-	 (c-mode . flymake-mode)))
+	 (c-mode . flymake-mode))
+  :config
+  (setq c-block-comment-prefix "* "))
 
 
 ;; Python

@@ -39,6 +39,9 @@
 
 ;; Increase font size
 (set-face-attribute 'default nil :height 140)
+;; Don't hide frame
+(global-set-key (kbd "C-z") nil)
+(global-set-key (kbd "C-x C-z") nil)
 
 
 ;;; Editing

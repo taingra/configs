@@ -177,7 +177,7 @@ Saves to a temp file and puts the filename in the kill ring."
 
 (use-package paredit
   :ensure t
-  :hook (emacs-lisp-mode lisp-mode scheme-mode))
+  :hook ((emacs-lisp-mode lisp-mode scheme-mode) . paredit-mode))
 
 ;; Drop down auto-completion support
 (use-package company
